@@ -10,9 +10,12 @@ import {
 } from 'unocss'
 
 export default defineConfig({
-  shortcuts: [
-    // ...
+  rules: [
+    ['drag-none', {
+      '-webkit-user-drag': 'none',
+    }],
   ],
+  shortcuts: {},
   theme: {
     colors: {
       // ...

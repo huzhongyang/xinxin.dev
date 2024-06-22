@@ -1,10 +1,10 @@
 <script setup lang="ts">
-
+const isShowProgressPage = useIsDeveloping()
 </script>
 
 <template>
   <div>
-    <TheNav />
+    <TheNav v-show="!isShowProgressPage" />
     <slot />
   </div>
 </template>

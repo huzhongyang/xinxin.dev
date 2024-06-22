@@ -1,9 +1,14 @@
 <script setup lang="ts">
+import TheProgressPage from '~/components/TheProgressPage.vue'
 
+const isShowProgressPage = useIsDeveloping()
 </script>
 
 <template>
-  <h1>pages/index</h1>
+  <div class="w-screen h-lvh">
+    <TheHome v-if="!isShowProgressPage" />
+    <TheProgressPage v-else />
+  </div>
 </template>
 
 <style scoped>
