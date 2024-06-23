@@ -9,7 +9,8 @@ useIpadCursor()
         data-cursor="block"
         data-cursor-style="--cursor-radius: 50%;--cursor-scale: 1.1;--cursor-blur-duration: 1.4s"
         src="/images/avatar.png" alt="avatar"
-        class="avatar drag-none h-3rem rounded-full"
+        class="avatar drag-none h-3rem p1"
+        border="~ red/60 rounded-full"
       />
       <div>
         <span data-cursor="text" class="p-y-2 text-center">Hi, I'm&nbsp;</span>
