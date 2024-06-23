@@ -1,5 +1,8 @@
-<script>
+<script setup lang="ts">
 import '@unocss/reset/tailwind.css'
+import { setupHeader } from '~/composables/setups'
+
+setupHeader()
 </script>
 
 <template>
