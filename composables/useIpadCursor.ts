@@ -1,7 +1,7 @@
 import { useCursor } from 'ipad-cursor/vue'
 
 export function useIpadCursor() {
-  useCursor()
+  return useCursor()
   // const { customCursorStyle } = useCursor()
   // const lockCursorStyle = customCursorStyle({
   //   backdropBlur: 0,

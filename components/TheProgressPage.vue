@@ -1,5 +1,34 @@
 <script setup lang="ts">
-useIpadCursor()
+import { sleep } from '@antfu/utils'
+import Typed from 'typed.js'
+
+const desTypedRef = ref<HTMLDivElement>()
+const desTypedEleRef = ref<HTMLDivElement>()
+
+const noteTypedRef = ref<HTMLDivElement>()
+const noteTypedEleRef = ref<HTMLDivElement>()
+
+const { updateCursor } = useIpadCursor()
+
+onMounted(async () => {
+  const desTyped = await useTyped(desTypedEleRef.value!, desTypedRef.value!)
+  await sleep(1000)
+  desTyped.cursor.remove()
+  updateCursor()
+  await useTyped(noteTypedEleRef.value!, noteTypedRef.value!)
+  await sleep(1000)
+  updateCursor()
+})
+
+function useTyped(from: HTMLElement, to: HTMLElement, speed: number = 10) {
+  return new Promise<Typed>((resolve) => {
+    const _ = new Typed(to, {
+      stringsElement: from,
+      typeSpeed: speed,
+      onComplete: self => resolve(self),
+    })
+  })
+}
 </script>
 
 <template>
@@ -9,21 +38,46 @@ useIpadCursor()
         data-cursor="block"
         data-cursor-style="--cursor-radius: 50%;--cursor-scale: 1.1;--cursor-blur-duration: 1.4s"
         src="/images/avatar.png" alt="avatar"
-        class="avatar drag-none h-3rem p1"
+        class="avatar h-3rem p1 drag-none"
         border="~ red/60 rounded-full"
       />
       <div>
         <span data-cursor="text" class="p-y-2 text-center">Hi, I'm&nbsp;</span>
-        <span data-cursor="block" class="name-hover inline-block p-y-2">zy</span>
+        <span data-cursor="block" class="name-hover inline-block p-y-2">zhongyang</span>
       </div>
     </div>
 
-    <div>
-      A Curious <code>&lt;dveloper /></code>
+    <div flex="~ row items-center">
+      <div ref="desTypedRef" inline-block data-cursor="text" class="text-24px font-500" />
     </div>
 
-    <div>
-      I'm building this site
+    <div ref="desTypedEleRef" hidden>
+      <div>
+        <span data-cursor="text">
+          A Curious ^200 fullstack
+        </span>
+
+        <div ml1 inline-block px1 italic>
+          <code data-cursor="block" leading-none data-cursor-style="radius: 6px">
+            &#60;developer&nbsp;/&#62;
+          </code>
+        </div>
+      </div>
+    </div>
+
+    <div flex="~ row items-center" class="text-gray/40">
+      <div ref="noteTypedRef" inline-block data-cursor="text" />
+    </div>
+
+    <div ref="noteTypedEleRef" hidden>
+      <div>
+        <div flex="~" items-center>
+          <div data-cursor="block" mr2 p1 class="i-fluent-emoji:face-with-peeking-eye" />
+          <span data-cursor="text">
+            I'm building this site
+          </span>
+        </div>
+      </div>
     </div>
 
     <div>
@@ -61,7 +115,7 @@ useIpadCursor()
 
   &::after {
     padding: inherit;
-    content: 'zy';
+    content: 'zhongyang';
     display: inline-block;
     width: 0;
     top: 0;
