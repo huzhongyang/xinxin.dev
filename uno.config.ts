@@ -27,9 +27,9 @@ export default defineConfig({
     presetIcons(),
     presetTypography(),
     presetWebFonts({
-      provider: 'google',
+      provider: 'bunny',
       fonts: {
-        sans: 'Roboto',
+        akaya: 'Akaya Telivigala',
       },
     }),
   ],

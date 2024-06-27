@@ -12,3 +12,10 @@ setupHeader()
     </NuxtLayout>
   </div>
 </template>
+
+<style lang="scss">
+html,
+body {
+  --uno: font-akaya;
+}
+</style>
