@@ -11,4 +11,10 @@ export function setupHeader() {
       { rel: 'icon', type: 'image/png', href: '/icons/favicon-32x32.png', sizes: '32x32' },
     ],
   })
+
+  useHead({
+    script: [
+      { src: 'https://cdn.seline.so/seline.js', async: true },
+    ],
+  })
 }
