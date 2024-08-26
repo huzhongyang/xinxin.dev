@@ -5,7 +5,7 @@ const isShowProgressPage = useIsDeveloping()
 </script>
 
 <template>
-  <div class="w-screen h-lvh">
+  <div class="h-100% w-screen">
     <TheHome v-if="!isShowProgressPage" />
     <TheProgressPage v-else />
   </div>

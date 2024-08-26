@@ -16,6 +16,6 @@ setupHeader()
 <style lang="scss">
 html,
 body {
-  --uno: font-akaya;
+  --uno: font-base;
 }
 </style>

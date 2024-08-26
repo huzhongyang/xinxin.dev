@@ -4,7 +4,7 @@ const isShowProgressPage = useIsDeveloping()
 
 <template>
   <div>
-    <TheNav v-show="!isShowProgressPage" />
+    <!-- <TheNav v-show="!isShowProgressPage" /> -->
     <slot />
   </div>
 </template>

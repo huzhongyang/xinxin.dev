@@ -4,13 +4,7 @@
 
 <template>
   <div>
-    <div>
-      left
-    </div>
-
-    <div>
-      right
-    </div>
+    resume
   </div>
 </template>
 

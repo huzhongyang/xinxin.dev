@@ -15,7 +15,11 @@ export default defineConfig({
       '-webkit-user-drag': 'none',
     }],
   ],
-  shortcuts: {},
+  shortcuts: {
+    'font-base': 'font-Nunito',
+    'border-base': 'border-gray-300/60 dark:border-gray-600/60',
+    'bg-base': 'bg-gray-100/40 dark:bg-gray-800/40',
+  },
   theme: {
     colors: {
       // ...
@@ -29,7 +33,7 @@ export default defineConfig({
     presetWebFonts({
       provider: 'bunny',
       fonts: {
-        akaya: 'Akaya Telivigala',
+        Nunito: 'Nunito',
       },
     }),
   ],
