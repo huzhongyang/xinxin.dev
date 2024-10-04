@@ -8,4 +8,5 @@ export default defineNuxtConfig({
       showProgressPage: process.env.SHOW_PROGRESS_PAGE === 'true' || false,
     },
   },
+  compatibilityDate: '2024-10-04',
 })
