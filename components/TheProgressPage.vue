@@ -102,16 +102,16 @@ function useTyped(from: HTMLElement, to: HTMLElement, speed: number = 10) {
   }
 }
 
+@include hover-blur-keyframe('avatar-hover', 10px, 0);
 .avatar:hover {
-  @include hover-blur-keyframe('avatar-hover', 10px, 0);
   animation: ease-out 0.3s avatar-hover;
 }
 
+@include hover-blur-keyframe('name-hover', 2px, 0);
 .name-hover {
   position: relative;
   z-index: 1;
   &:hover {
-    @include hover-blur-keyframe('name-hover', 2px, 0);
     animation: name-hover 0.5s ease-out;
   }
 
