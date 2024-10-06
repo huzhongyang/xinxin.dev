@@ -19,6 +19,7 @@ export default defineConfig({
     'font-base': 'font-Nunito',
     'border-base': 'border-gray-300/60 dark:border-gray-600/60',
     'bg-base': 'bg-gray-100/40 dark:bg-gray-800/40',
+    'menu-hover-bg': 'bg-[rgb(230,231,235)]/100 dark:bg-[rgb(230,231,235)]/100',
   },
   theme: {
     colors: {

@@ -6,7 +6,19 @@ const isShowProgressPage = useIsDeveloping()
 
 <template>
   <div class="h-100% w-screen">
-    <TheHome v-if="!isShowProgressPage" />
+    <!-- <TheHome v-if="!isShowProgressPage" /> -->
+    <div v-if="!isShowProgressPage">
+      <NuxtLayout>
+        <template #left>
+          <TheLeftSide border="r base" bg-base />
+        </template>
+
+        <template #right>
+          <TheRightSide />
+        </template>
+      </NuxtLayout>
+    </div>
+
     <TheProgressPage v-else />
   </div>
 </template>

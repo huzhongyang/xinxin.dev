@@ -4,11 +4,6 @@
 
 <template>
   <div>
-    content
-    <nuxt-page />
+    writing
   </div>
 </template>
-
-<style scoped>
-
-</style>

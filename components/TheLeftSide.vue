@@ -5,8 +5,8 @@ import TheResumeTop from '~/components/leftSide/TheResumeTop.vue'
 </script>
 
 <template>
-  <div>
-    <TheResumeTop />
+  <div px-8px py-10px>
+    <TheResumeTop mb-2 />
     <TheMenu />
     <TheOnlineLink />
   </div>

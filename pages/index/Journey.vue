@@ -4,11 +4,6 @@
 
 <template>
   <div>
-    content
-    <nuxt-page />
+    journey
   </div>
 </template>
-
-<style scoped>
-
-</style>
