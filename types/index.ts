@@ -16,6 +16,19 @@ export const menuRouter = [
   },
 ] as const
 
+export const onlineLinks = [
+  {
+    name: 'GitHub',
+    url: 'https://github.com/huzhongyang',
+    icon: 'i-iconoir-github',
+  },
+  {
+    name: 'X (Twitter)',
+    url: 'https://x.com/hzy18023',
+    icon: 'i-carbon-logo-x',
+  },
+]
+
 export type MenusPath = (typeof menuRouter[number])['name']
 
 export interface Menu {

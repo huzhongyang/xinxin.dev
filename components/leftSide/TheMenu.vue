@@ -14,14 +14,14 @@ function menuClicked(menu: Menu) {
       <nuxt-link
         v-for="menu in menuRouter" :key="menu.name"
         :to="menu.path"
-        grid="~ rows-1 cols-[1.5rem_1fr] items-center gap-3"
+        grid="~ rows-1 cols-[1rem_1fr] items-center gap-3"
         my-2 p-2 duration-400
         border="rounded-2xl"
         hover:shadow="~ rounded-2xl"
         :class="[curPath === menu.name ? 'cur-path' : 'hover:menu-hover-bg']"
         @click="menuClicked(menu)"
       >
-        <div h-6 w-6 :class="[menu.icon, menu.name === curPath ? 'bg-white' : '']" />
+        <div h-4 w-4 :class="[menu.icon, menu.name === curPath ? 'bg-white' : '']" />
         <span>{{ menu.name }}</span>
       </nuxt-link>
     </client-only>

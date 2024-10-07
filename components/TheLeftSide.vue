@@ -8,7 +8,7 @@ import TheResumeTop from '~/components/leftSide/TheResumeTop.vue'
   <div px-8px py-10px>
     <TheResumeTop mb-2 />
     <TheMenu />
-    <TheOnlineLink />
+    <TheOnlineLink border-t="~ bg-base" mt-6 pt-6 />
   </div>
 </template>
 
