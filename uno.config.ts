@@ -14,6 +14,10 @@ export default defineConfig({
     ['drag-none', {
       '-webkit-user-drag': 'none',
     }],
+    ['cur-path', {
+      'background-color': 'var(--bg-cur-path)',
+      'color': 'var(--color-cur-path)',
+    }],
   ],
   shortcuts: {
     'font-base': 'font-Nunito',

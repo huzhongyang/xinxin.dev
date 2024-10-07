@@ -1,25 +1,10 @@
 <script setup lang="ts">
-const menuRouter = [
-  {
-    name: 'Home',
-    path: '/',
-    icon: 'i-carbon-ibm-cloud-direct-link-2-dedicated-hosting',
-  },
-  {
-    name: 'Writing',
-    path: '/writing',
-    icon: 'i-carbon-pen-fountain',
-  },
-  {
-    name: 'Journey',
-    path: '/journey',
-    icon: 'i-carbon-favorite-filled',
-  },
-]
-const curPath = ref('Home')
+import { type Menu, menuRouter, type MenusPath } from '~/types'
 
-function menuClicked(menu: any) {
-  curPath.value = menu.path
+const curPath = ref<MenusPath>('Home')
+
+function menuClicked(menu: Menu) {
+  curPath.value = menu.name as MenusPath
 }
 </script>
 
@@ -30,12 +15,13 @@ function menuClicked(menu: any) {
         v-for="menu in menuRouter" :key="menu.name"
         :to="menu.path"
         grid="~ rows-1 cols-[1.5rem_1fr] items-center gap-3"
-        p-2 duration-400 hover:menu-hover-bg
+        my-2 p-2 duration-400
         border="rounded-2xl"
         hover:shadow="~ rounded-2xl"
+        :class="[curPath === menu.name ? 'cur-path' : 'hover:menu-hover-bg']"
         @click="menuClicked(menu)"
       >
-        <div flex="~ row items-center gap-2" h-6 w-6 :class="menu.icon" />
+        <div h-6 w-6 :class="[menu.icon, menu.name === curPath ? 'bg-white' : '']" />
         <span>{{ menu.name }}</span>
       </nuxt-link>
     </client-only>
