@@ -1,4 +1,7 @@
 <script setup lang="ts">
+/**
+ * 需要禁用默认布局, 才可以使用具名插槽
+ */
 definePageMeta({
   layout: false,
 })
