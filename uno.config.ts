@@ -33,7 +33,9 @@ export default defineConfig({
   presets: [
     presetUno(),
     presetAttributify(),
-    presetIcons(),
+    presetIcons({
+      cdn: 'https://esm.sh/',
+    }),
     presetTypography(),
     presetWebFonts({
       provider: 'bunny',
@@ -46,4 +48,13 @@ export default defineConfig({
     transformerDirectives(),
     transformerVariantGroup(),
   ],
+
+  // https://unocss.dev/guide/extracting#extracting-from-build-tools-pipeline
+  content: {
+    pipeline: {
+      include: [
+        'src/**/*.{js,ts}',
+      ],
+    },
+  },
 })
