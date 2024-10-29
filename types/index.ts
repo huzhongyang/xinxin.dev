@@ -1,3 +1,5 @@
+// @unocss-include
+
 export const menuRouter = [
   {
     name: 'Home',

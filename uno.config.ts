@@ -48,13 +48,4 @@ export default defineConfig({
     transformerDirectives(),
     transformerVariantGroup(),
   ],
-
-  // https://unocss.dev/guide/extracting#extracting-from-build-tools-pipeline
-  content: {
-    pipeline: {
-      include: [
-        'src/**/*.{js,ts}',
-      ],
-    },
-  },
 })
