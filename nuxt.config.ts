@@ -1,7 +1,7 @@
 import process from 'node:process'
 
 export default defineNuxtConfig({
-  modules: ['@unocss/nuxt', '@nuxtjs/google-fonts', '@nuxt/image'],
+  modules: ['@unocss/nuxt', '@nuxtjs/google-fonts', '@nuxt/image', '@nuxt/content'],
   devtools: { enabled: true },
   runtimeConfig: {
     public: {
