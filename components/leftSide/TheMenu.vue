@@ -10,7 +10,7 @@ function menuClicked(menu: Menu) {
 </script>
 
 <template>
-  <nuxt-links
+  <nuxt-link
     v-for="menu in menuRouter" :key="menu.name"
     :to="menu.path"
     grid="~ rows-1 cols-[1rem_1fr] items-center gap-3"
@@ -22,7 +22,7 @@ function menuClicked(menu: Menu) {
   >
     <div h-4 w-4 :class="[menu.icon, menu.path === curPath ? 'bg-white' : '']" />
     <span>{{ menu.name }}</span>
-  </nuxt-links>
+  </nuxt-link>
 </template>
 
 <style scoped>
