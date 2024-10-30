@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { type Menu, menuRouter, type MenusPath } from '~/types'
 
-const curPath = ref<MenusPath>('Home')
+const route = useRoute()
+const curPath = ref<MenusPath>(route.path as MenusPath)
 
 function menuClicked(menu: Menu) {
-  curPath.value = menu.name as MenusPath
+  curPath.value = menu.path as MenusPath
 }
 </script>
 
@@ -16,10 +17,10 @@ function menuClicked(menu: Menu) {
     my-2 p-2 duration-400
     border="rounded-2xl"
     hover:shadow="~ rounded-2xl"
-    :class="[curPath === menu.name ? 'cur-path' : 'hover:menu-hover-bg']"
+    :class="[curPath === menu.path ? 'cur-path' : 'hover:menu-hover-bg']"
     @click="menuClicked(menu)"
   >
-    <div h-4 w-4 :class="[menu.icon, menu.name === curPath ? 'bg-white' : '']" />
+    <div h-4 w-4 :class="[menu.icon, menu.path === curPath ? 'bg-white' : '']" />
     <span>{{ menu.name }}</span>
   </nuxt-link>
 </template>
