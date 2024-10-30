@@ -30,6 +30,7 @@
     "@unocss/nuxt": "^0.63.6",
     "eslint": "9.11.1",
     "eslint-plugin-format": "^0.1.2",
-    "sass": "^1.80.4"
+    "sass": "^1.80.4",
+    "sharp": "^0.33.5"
   }
 }
