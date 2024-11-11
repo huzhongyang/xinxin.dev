@@ -2,6 +2,11 @@ import process from 'node:process'
 
 export default defineNuxtConfig({
   modules: ['@unocss/nuxt', '@nuxtjs/google-fonts', '@nuxt/image', '@nuxt/content'],
+  content: {
+    navigation: {
+      fields: ['title', 'description', 'created', 'modified', 'author', 'tags', 'category', 'aliases', 'draft', 'stick'],
+    },
+  },
   devtools: { enabled: true },
   runtimeConfig: {
     public: {

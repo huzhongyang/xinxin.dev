@@ -4,7 +4,6 @@
 
 <template>
   <div>
-    content
     <nuxt-page />
   </div>
 </template>

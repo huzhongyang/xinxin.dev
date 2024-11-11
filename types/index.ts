@@ -31,7 +31,7 @@ export const onlineLinks = [
   },
 ]
 
-export type MenusPath = (typeof menuRouter[number])['name']
+export type MenusPath = (typeof menuRouter[number])['path']
 
 export interface Menu {
   name: string
