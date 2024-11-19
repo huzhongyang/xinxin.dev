@@ -10,7 +10,7 @@ import PostList from '~/components/writing/PostList.vue'
     </div>
 
     <!-- post content -->
-    <div>
+    <div overflow-auto p2>
       <nuxt-page />
     </div>
   </div>

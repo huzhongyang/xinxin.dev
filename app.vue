@@ -8,14 +8,12 @@ setupHeader()
 
 <template>
   <div class="w-screen h-lvh">
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
+    <NuxtPage />
   </div>
 </template>
 
 <style lang="scss">
-html,
+  html,
 body {
   --uno: font-base;
 }
