@@ -18,7 +18,7 @@
     "@nuxtjs/google-fonts": "^3.2.0",
     "@unocss/reset": "^0.64.1",
     "ipad-cursor": "^0.5.2",
-    "nuxt": "^3.14.159",
+    "nuxt": "^3.14.1592",
     "pinceau": "^0.18.10",
     "typed.js": "^2.1.0",
     "vue": "^3.5.13",
@@ -26,14 +26,15 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.9.2",
-    "@iconify/json": "^2.2.273",
+    "@iconify/json": "^2.2.274",
     "@nuxt-themes/typography": "^1.0.1",
     "@unocss/eslint-plugin": "^0.64.1",
     "@unocss/nuxt": "^0.64.1",
-    "eslint": "9.11.1",
+    "eslint": "^9.15.0",
     "eslint-plugin-format": "^0.1.2",
     "sass": "^1.81.0",
     "sharp": "^0.33.5",
+    "typescript": "^5.6.3",
     "unocss": "^0.64.1"
   }
 }

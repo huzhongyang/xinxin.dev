@@ -1,3 +1,5 @@
+// eslint-disable-next-line ts/ban-ts-comment
+// @ts-nocheck
 import { defineTheme } from 'pinceau'
 
 // Checkout all the properties to overwrite: https://github.com/nuxt-themes/typography/blob/main/tokens.config.ts
