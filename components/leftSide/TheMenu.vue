@@ -7,6 +7,15 @@ const curPath = ref<MenusPath>(route.path as MenusPath)
 function menuClicked(menu: Menu) {
   curPath.value = menu.path as MenusPath
 }
+
+function matchMenuPath(path: string, menuPath: string) {
+  if (menuPath === '/' && path === menuPath) {
+    return true
+  }
+  else if (menuPath !== '/') {
+    return path.startsWith(menuPath)
+  }
+}
 </script>
 
 <template>
@@ -17,14 +26,10 @@ function menuClicked(menu: Menu) {
     my-2 p-2 duration-400
     border="rounded-2xl"
     hover:shadow="~ rounded-2xl"
-    :class="[curPath === menu.path ? 'cur-path' : 'hover:menu-hover-bg']"
+    :class="[matchMenuPath(curPath, menu.path) ? 'cur-path' : 'hover:menu-hover-bg']"
     @click="menuClicked(menu)"
   >
-    <div h-4 w-4 :class="[menu.icon, menu.path === curPath ? 'bg-white' : '']" />
+    <div h-4 w-4 :class="[menu.icon, matchMenuPath(curPath, menu.path) ? 'bg-white' : '']" />
     <span>{{ menu.name }}</span>
   </nuxt-link>
 </template>
-
-<style scoped>
-
-</style>
