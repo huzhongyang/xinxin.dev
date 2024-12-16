@@ -1,11 +1,13 @@
 <script setup lang="ts">
-import type { NavItem } from '@nuxt/content'
+import type { PostNavItem } from '~/types'
 
 const curPostId = ref('')
 
-const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation())
+const contentQuery = queryContent('writing')
+const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation(contentQuery))
+
 const allPosts = computed(() => {
-  const posts: NavItem[] = []
+  const posts: PostNavItem[] = []
   if (!navigation.value)
     navigation!.value = []
   for (let i = 0; i < navigation.value.length; i++) {
@@ -19,21 +21,29 @@ const allPosts = computed(() => {
   return posts
 })
 
-function postClick(e: Event, item: NavItem) {
-  e.preventDefault()
-  curPostId.value = item._id!
+function postClick(id: string) {
+  curPostId.value = id
 }
 </script>
 
 <template>
   <client-only>
     <div
-      v-for="item in allPosts" :key="item._path"
       flex="~ col items-start gap-2"
-      @click="postClick($event, item)"
     >
-      <nuxt-link :to="item._path">
-        {{ item.title }}
+      <nuxt-link
+        v-for="item in allPosts" :key="item._path"
+        :to="item._path" w-full
+        @click="postClick(item._path)"
+      >
+        <div
+          :class="[curPostId === item._path ? 'menu-hover-bg' : '']"
+          class="p-2 hover:menu-hover-bg"
+          flex="~ col items-start gap-1" rounded-2xl duration-400
+        >
+          <span class="text-2xl font-bold">{{ item.title }}</span>
+          <span class="text-sm text-gray/60">{{ item.created }} </span>
+        </div>
       </nuxt-link>
     </div>
   </client-only>

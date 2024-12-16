@@ -5,7 +5,7 @@ import PostList from '~/components/writing/PostList.vue'
 <template>
   <div grid="~ cols-[300px_1fr] rows-1" h-screen w-full>
     <!-- post menus -->
-    <div b-r p2 bg-base>
+    <div overflow-auto b-r p2 bg-base>
       <PostList />
     </div>
 
