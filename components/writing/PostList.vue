@@ -41,8 +41,8 @@ function postClick(id: string) {
           class="p-2 hover:menu-hover-bg"
           flex="~ col items-start gap-1" rounded-2xl duration-400
         >
-          <span class="text-2xl font-bold">{{ item.title }}</span>
-          <span class="text-sm text-gray/60">{{ item.created }} </span>
+          <span class="text-lg font-bold">{{ item.title }}</span>
+          <span class="text-sm text-gray/80">{{ item.created }} </span>
         </div>
       </nuxt-link>
     </div>
