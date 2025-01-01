@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import type { PostNavItem } from '~/types'
 
-const curPostId = ref('')
+const route = useRoute()
+const curPostId = ref(route.path)
 
 const contentQuery = queryContent('writing')
 const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation(contentQuery))
