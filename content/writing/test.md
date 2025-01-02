@@ -11,7 +11,7 @@ category: a
 aliases:
   - c
   - d
-draft: true
+draft: false
 stick: false
 ---
 
