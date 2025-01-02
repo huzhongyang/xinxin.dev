@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   modules: ['@unocss/nuxt', '@nuxtjs/google-fonts', '@nuxt/image', '@nuxt/content', 'pinceau/nuxt'],
   content: {
     navigation: {
-      fields: ['title', 'description', 'created', 'modified', 'author', 'tags', 'category', 'aliases', 'draft', 'stick'],
+      fields: ['title', 'description', 'created', 'modified', 'author', 'tags', 'category', 'aliases', 'stick'],
     },
     documentDriven: true,
   },

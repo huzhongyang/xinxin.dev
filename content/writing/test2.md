@@ -9,7 +9,6 @@ tags:
   - test
 category: 
 aliases: 
-draft: true
 stick: false
 ---
 

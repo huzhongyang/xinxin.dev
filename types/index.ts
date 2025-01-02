@@ -48,7 +48,6 @@ export interface PostNavItem extends NavItem {
   tags?: string[]
   category?: string
   aliases?: string[]
-  draft?: boolean
   stick?: boolean
   description?: string
 }
