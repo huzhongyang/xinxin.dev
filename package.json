@@ -36,5 +36,14 @@
     "sharp": "^0.33.5",
     "typescript": "^5.7.3",
     "unocss": "^65.4.3"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "@parcel/watcher",
+      "better-sqlite3",
+      "vue-demi",
+      "sharp"
+    ]
   }
 }

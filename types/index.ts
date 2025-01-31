@@ -1,7 +1,4 @@
 // @unocss-include
-
-import type { NavItem } from '@nuxt/content'
-
 export const menuRouter = [
   {
     name: 'Home',
@@ -39,15 +36,4 @@ export interface Menu {
   name: string
   path: string
   icon: string
-}
-
-export interface PostNavItem extends NavItem {
-  created?: string
-  modified?: string
-  author?: string
-  tags?: string[]
-  category?: string
-  aliases?: string[]
-  stick?: boolean
-  description?: string
 }
