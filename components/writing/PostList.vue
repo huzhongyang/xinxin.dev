@@ -1,29 +1,10 @@
 <script setup lang="ts">
-import type { PostNavItem } from '~/types'
-
 const route = useRoute()
-const curPostId = ref(route.path)
+const curPostPath = ref(route.path)
 
-const contentQuery = queryContent('writing')
-const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation(contentQuery))
-
-const allPosts = computed(() => {
-  const posts: PostNavItem[] = []
-  if (!navigation.value)
-    navigation!.value = []
-  for (let i = 0; i < navigation.value.length; i++) {
-    if (navigation.value[i].children) {
-      navigation!.value.push(...navigation.value[i].children!)
-    }
-    else {
-      posts.push(navigation.value[i])
-    }
-  }
-  return posts
-})
-
-function postClick(id: string) {
-  curPostId.value = id
+const { data: allPosts } = await useAsyncData('blogs', () => queryCollection('blogs').all())
+function postClick(path: string) {
+  curPostPath.value = path
 }
 </script>
 
@@ -33,12 +14,12 @@ function postClick(id: string) {
       flex="~ col items-start gap-2"
     >
       <nuxt-link
-        v-for="item in allPosts" :key="item._path"
-        :to="item._path" w-full
-        @click="postClick(item._path)"
+        v-for="item in allPosts" :key="item.id"
+        :to="item.path" w-full
+        @click="postClick(item.path)"
       >
         <div
-          :class="[curPostId === item._path ? 'menu-hover-bg' : '']"
+          :class="[curPostPath === item.path ? 'menu-hover-bg' : '']"
           class="p-2 hover:menu-hover-bg"
           flex="~ col items-start gap-1" rounded-2xl duration-400
         >
