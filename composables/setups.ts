@@ -14,7 +14,7 @@ export function setupHeader() {
 
   useHead({
     script: [
-      { src: 'https://cdn.seline.so/seline.js', async: true },
+      // { src: 'https://cdn.seline.so/seline.js', async: true },
     ],
   })
 }

@@ -9,24 +9,22 @@ function postClick(path: string) {
 </script>
 
 <template>
-  <client-only>
-    <div
-      flex="~ col items-start gap-2"
+  <div
+    flex="~ col items-start gap-2"
+  >
+    <nuxt-link
+      v-for="item in allPosts" :key="item.id"
+      :to="item.path" w-full
+      @click="postClick(item.path)"
     >
-      <nuxt-link
-        v-for="item in allPosts" :key="item.id"
-        :to="item.path" w-full
-        @click="postClick(item.path)"
+      <div
+        :class="[curPostPath === item.path ? 'menu-hover-bg' : '']"
+        class="p-2 hover:menu-hover-bg"
+        flex="~ col items-start gap-1" rounded-2xl duration-400
       >
-        <div
-          :class="[curPostPath === item.path ? 'menu-hover-bg' : '']"
-          class="p-2 hover:menu-hover-bg"
-          flex="~ col items-start gap-1" rounded-2xl duration-400
-        >
-          <span class="text-lg font-bold">{{ item.title }}</span>
-          <span class="text-sm text-gray/80">{{ item.created }} </span>
-        </div>
-      </nuxt-link>
-    </div>
-  </client-only>
+        <span class="text-lg font-bold">{{ item.title }}</span>
+        <span class="text-sm text-gray/80">{{ item.created }} </span>
+      </div>
+    </nuxt-link>
+  </div>
 </template>
