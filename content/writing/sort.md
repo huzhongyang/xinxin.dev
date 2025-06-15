@@ -14,7 +14,8 @@ stick: false
 
 # 排序
 
-<img src="/posts/4abde1748817d7f35f2bf8b6a058aa40~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.awebp" alt="排序对比" style="zoom:67%;" />
+<img src="/posts/test.awebp" alt="排序对比" style="zoom:100%;" />
+<img src="/images/avatar.png" alt="排序对比" />
 
 > * n: 数据规模. k: 桶的个数. In-place: 占用常数内存, 不占用额外内存. Out-place: 占用额外的内存.
 >
@@ -33,7 +34,7 @@ stick: false
 > 1. 从头开始比较每一对相邻的元素 -> 执行完成一轮后, 最末尾的元素就是本轮中最大的元素
 > 2. 忽略 (1) 中找到的最大元素, 重复执行, 直到元素全部有序.
 
-<img src="/posts/e53646cab99a49a2b9768493936c674b~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp" alt="img" style="zoom: 67%;" />
+<img src="/posts/test3.awebp" alt="img" style="zoom: 67%;" />
 
 ```ts
 function bubbleSort(arr: number[]): number[] {
@@ -80,7 +81,7 @@ console.log(bubbleSort2(arr2))
 
 ## 选择排序 Selection Sort
 
-<img src="/posts/9bebaa9d1d4544218dc5c02c658f7a3d~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp" alt="img" style="zoom:67%;" />
+<img src="/posts/test1.awebp" alt="img" style="zoom:67%;" />
 
 ```ts
 function selectionSotr(arr: number[]): number[] {
@@ -102,7 +103,7 @@ console.log(selectionSotr(arr3))
 
 ## 插入排序 Insertion Sort
 
-<img src="/posts/d5ae17e6956f478fa3ec261621cdeee9~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp" alt="img" style="zoom:67%;" />
+<img src="/posts/test2.awebp" alt="img" style="zoom:67%;" />
 
 ```ts
 function insertionSort(arr: number[]): number[] {
@@ -128,7 +129,7 @@ console.log(insertionSort(arr4))
 > 2. 将小于 target 的所有元素放到左边, 大于 target 的元素放到右边
 > 3. 递归 重复
 
-<img src="/posts/fa5adcedc00044acaf85133371182ccb~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp" alt="image.png" style="zoom: 50%;" />
+<img src="/posts/test4.awebp" alt="image.png" style="zoom: 50%;" />
 
 ```ts
 function quickSort(arr: number[]): number[] {

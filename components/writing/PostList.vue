@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 const route = useRoute()
 const curPostPath = ref(route.path)
 
@@ -18,9 +18,9 @@ function postClick(path: string) {
       @click="postClick(item.path)"
     >
       <div
-        :class="[curPostPath === item.path ? 'menu-hover-bg' : '']"
+        :class="[curPostPath === item.path ? 'menu-hover-bg' : '', item.created ? 'gap-1' : '']"
         class="p-2 hover:menu-hover-bg"
-        flex="~ col items-start gap-1" rounded-2xl duration-400
+        flex="~ col items-start" rounded-2xl duration-400
       >
         <span class="text-lg font-bold">{{ item.title }}</span>
         <span class="text-sm text-gray/80">{{ item.created }} </span>

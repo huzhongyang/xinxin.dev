@@ -1,8 +1,7 @@
 import process from 'node:process'
 
 export default defineNuxtConfig({
-  extends: '@nuxt-themes/typography',
-  modules: ['pinceau/nuxt', '@unocss/nuxt', '@nuxtjs/google-fonts', '@nuxt/image', '@nuxt/content'],
+  modules: ['@nuxt/content', '@unocss/nuxt', '@nuxtjs/google-fonts', '@nuxt/image'],
   content: {
     build: {
       markdown: {
@@ -26,5 +25,4 @@ export default defineNuxtConfig({
       showProgressPage: process.env.SHOW_PROGRESS_PAGE === 'true' || false,
     },
   },
-  compatibilityDate: '2024-10-04',
 })
