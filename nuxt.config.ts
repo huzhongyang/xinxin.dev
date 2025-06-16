@@ -23,10 +23,6 @@ export default defineNuxtConfig({
       type: 'd1',
       bindingName: 'blog_db',
     },
-    database: {
-      type: 'd1',
-      bindingName: 'DB',
-    },
   },
   nitro: {
     preset: 'cloudflare_pages',
