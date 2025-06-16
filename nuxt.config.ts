@@ -18,8 +18,13 @@ export default defineNuxtConfig({
         },
       },
     },
+    database: {
+      type: 'd1',
+      bindingName: 'DB',
+    },
   },
   devtools: { enabled: true },
+  compatibilityDate: '2025-06-16',
   runtimeConfig: {
     public: {
       showProgressPage: process.env.SHOW_PROGRESS_PAGE === 'true' || false,

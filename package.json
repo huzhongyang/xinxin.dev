@@ -17,7 +17,7 @@
     "@nuxt/content": "^3.6.0",
     "@nuxt/image": "^1.10.0",
     "@nuxtjs/google-fonts": "^3.2.0",
-    "@unocss/reset": "^66.2.0",
+    "@unocss/reset": "^66.2.1",
     "better-sqlite3": "^11.10.0",
     "ipad-cursor": "^0.5.2",
     "nuxt": "^3.17.5",
@@ -28,15 +28,15 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.14.1",
-    "@iconify/json": "^2.2.348",
-    "@unocss/eslint-plugin": "^66.2.0",
-    "@unocss/nuxt": "^66.2.0",
+    "@iconify/json": "^2.2.349",
+    "@unocss/eslint-plugin": "^66.2.1",
+    "@unocss/nuxt": "^66.2.1",
     "eslint": "^9.29.0",
     "eslint-plugin-format": "^1.0.1",
     "sass": "^1.89.2",
     "sharp": "^0.34.2",
     "typescript": "^5.8.3",
-    "unocss": "^66.2.0"
+    "unocss": "^66.2.1"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
