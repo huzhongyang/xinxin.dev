@@ -17,11 +17,15 @@ export default defineNuxtConfig({
           },
         },
       },
+
     },
     database: {
       type: 'd1',
-      bindingName: 'DB',
+      bindingName: 'blog_db',
     },
+  },
+  nitro: {
+    preset: 'cloudflare_pages',
   },
   devtools: { enabled: true },
   compatibilityDate: '2025-06-16',
