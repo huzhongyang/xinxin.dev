@@ -21,7 +21,7 @@ export default defineNuxtConfig({
     },
     database: {
       type: 'd1',
-      bindingName: 'blog_db',
+      bindingName: 'DB',
     },
   },
   nitro: {
