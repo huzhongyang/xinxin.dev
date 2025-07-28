@@ -1,7 +1,7 @@
 import process from 'node:process'
 
 export default defineNuxtConfig({
-  modules: ['@nuxt/content', '@unocss/nuxt', '@nuxtjs/google-fonts', '@nuxt/image'],
+  modules: ['@unocss/nuxt', '@nuxthub/core', '@nuxt/content', '@nuxtjs/google-fonts', '@nuxt/image'],
   content: {
     build: {
       markdown: {
@@ -21,14 +21,14 @@ export default defineNuxtConfig({
     },
     database: {
       type: 'd1',
-      bindingName: 'DB',
+      bindingName: 'blog',
     },
   },
-  nitro: {
-    preset: 'cloudflare_pages',
-  },
   devtools: { enabled: true },
-  compatibilityDate: '2025-06-16',
+  hub: {
+    database: true,
+  },
+  compatibilityDate: 'latest',
   runtimeConfig: {
     public: {
       showProgressPage: process.env.SHOW_PROGRESS_PAGE === 'true' || false,
