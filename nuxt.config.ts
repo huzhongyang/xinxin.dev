@@ -19,10 +19,6 @@ export default defineNuxtConfig({
       },
 
     },
-    database: {
-      type: 'd1',
-      bindingName: 'blog',
-    },
   },
   devtools: { enabled: true },
   hub: {
