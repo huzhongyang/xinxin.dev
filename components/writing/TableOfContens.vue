@@ -1,25 +1,29 @@
 <script setup lang="ts">
-import type { Toc } from '@nuxtjs/mdc'
+import type { Toc } from '@nuxt/content'
 
 const props = defineProps<{ toc: Toc | undefined }>()
+// let ob: IntersectionObserver
+// if (import.meta.client) {
+//   ob = new IntersectionObserver(
+//     (entries, observer) => {
+//       entries.forEach((entry) => {
+//         console.log(entry)
+//       })
+//     },
+//     {
+//       root: null,
+//       rootMargin: '0px',
+//       threshold: 0.1,
+//     },
+//   )
+// }
 
-const ob = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      console.log(entry)
-      const link = document.querySelector(`a[href="#${entry.target.id}"]`)
-      console.log(link)
-    })
-  },
-  { rootMargin: '-50% 0px -50% 0px' },
-)
-
-onMounted(() => {
+onMounted(async () => {
+  await sleep(1000)
+  console.log(1111)
   // observe h2
-  const h2s = document.querySelectorAll('h2[id]')
-  h2s.forEach((h2) => {
-    ob.observe(h2)
-  })
+  const h2s = document.getElementsby('h2[id]')
+  console.log(h2s)
 })
 </script>
 
