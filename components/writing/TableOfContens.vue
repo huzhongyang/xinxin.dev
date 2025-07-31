@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import type { Toc } from '@nuxt/content'
 
-const props = defineProps<{ toc: Toc | undefined }>()
+const props = defineProps<{
+  toc: Toc | undefined
+  titles: HTMLHeadElement[] | undefined
+}>()
 // let ob: IntersectionObserver
 // if (import.meta.client) {
 //   ob = new IntersectionObserver(
@@ -19,11 +22,7 @@ const props = defineProps<{ toc: Toc | undefined }>()
 // }
 
 onMounted(async () => {
-  await sleep(1000)
-  console.log(1111)
-  // observe h2
-  const h2s = document.getElementsby('h2[id]')
-  console.log(h2s)
+  console.log(props.titles)
 })
 </script>
 
