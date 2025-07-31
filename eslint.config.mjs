@@ -22,3 +22,4 @@ export default antfu({
   unocss: true,
   vue: true,
 })
+  .removeRules('antfu/if-newline')
