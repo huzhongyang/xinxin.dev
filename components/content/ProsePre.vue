@@ -34,7 +34,7 @@ function copyClicked() {
 
 <template>
   <div
-    my-1 w-prose relative
+    my-1 w-full relative
     @mouseleave="copyButtonVisible = false"
     @mouseenter="copyButtonVisible = true"
   >

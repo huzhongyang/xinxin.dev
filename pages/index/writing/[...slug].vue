@@ -22,9 +22,9 @@ const postContainerRef = useTemplateRef<HTMLElement>('postContainerRef')
         v-if="showTableOfContents" :toc="page.body.toc"
         :post-container="postContainerRef"
         pos="fixed top-1/2 right-0"
-        transform="translate-y--1/2 translate-x--1/2"
+        transform="translate-y--1/2 translate-x--1/5"
         text="gray-500 text-sm"
-        opacity-80
+        opacity-80 w-120px
       />
     </client-only>
   </section>
