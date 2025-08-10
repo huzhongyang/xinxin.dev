@@ -2,10 +2,14 @@
 const route = useRoute()
 const curPostPath = ref(route.path)
 
-const { data: allPosts } = await useAsyncData('blogs', () => queryCollection('blogs').all())
-// allPosts 重复
+const { data: allPosts } = await useFetch('/api/getAllPosts')
+
 function postClick(path: string) {
   curPostPath.value = path
+}
+
+function rssClick() {
+  window.open('/rss.xml', '_blank')
 }
 </script>
 
@@ -16,7 +20,10 @@ function postClick(path: string) {
     <!-- RSS button -->
     <div flex="~ row items-center justify-between gap-2" px-15px py-10px b-b-1 w-full>
       <span text="xl" font-bold>Writing</span>
-      <button text="sm" border="~ gray/20 rounded-lg" p-4px flex gap-1 cursor-pointer items-center>
+      <button
+        text="sm" border="~ gray/20 rounded-lg" p-4px flex gap-1 cursor-pointer items-center
+        @click="rssClick"
+      >
         <span i-fe-feed />
         <span>RSS feed</span>
       </button>

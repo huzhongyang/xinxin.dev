@@ -1,7 +1,7 @@
 import process from 'node:process'
 
 export default defineNuxtConfig({
-  modules: ['@unocss/nuxt', '@nuxthub/core', '@nuxt/content', '@nuxtjs/google-fonts', '@nuxt/image'],
+  modules: ['nuxt-module-feed', '@unocss/nuxt', '@nuxthub/core', '@nuxt/content', '@nuxtjs/google-fonts', '@nuxt/image'],
   content: {
     build: {
       markdown: {
@@ -19,6 +19,15 @@ export default defineNuxtConfig({
       },
 
     },
+  },
+  feed: {
+    sources: [
+      {
+        path: '/rss.xml',
+        type: 'rss2',
+        cacheTime: 60 * 15,
+      },
+    ],
   },
   devtools: { enabled: true },
   hub: {
