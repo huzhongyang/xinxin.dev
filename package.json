@@ -22,24 +22,24 @@
     "better-sqlite3": "^12.2.0",
     "esbuild": "^0.25.8",
     "ipad-cursor": "^0.5.2",
-    "nuxt": "^4.0.2",
+    "nuxt": "^4.0.3",
     "typed.js": "^2.1.0",
     "ufo": "^1.6.1",
     "vue": "^3.5.18",
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^5.1.0",
-    "@iconify/json": "^2.2.364",
+    "@antfu/eslint-config": "^5.2.0",
+    "@iconify/json": "^2.2.367",
     "@unocss/eslint-plugin": "66.2.1",
     "@unocss/nuxt": "66.2.1",
-    "eslint": "^9.32.0",
+    "eslint": "^9.33.0",
     "eslint-plugin-format": "^1.0.1",
-    "sass": "^1.89.2",
+    "sass": "^1.90.0",
     "sharp": "^0.34.3",
     "typescript": "^5.9.2",
     "unocss": "66.2.1",
-    "wrangler": "^4.27.0"
+    "wrangler": "^4.28.1"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
