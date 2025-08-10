@@ -13,7 +13,6 @@ export default defineNitroPlugin(async (nitroApp) => {
 
 async function createRssFeed(feed: Feed) {
   const allPosts = await $fetch('/api/getAllPosts')
-  console.log(allPosts)
   for (const post of allPosts) {
     feed.addItem({
       title: post.title,
@@ -24,7 +23,15 @@ async function createRssFeed(feed: Feed) {
     })
   }
   feed.addCategory('blog post')
-
+  feed.options = {
+    id: 'Huzhongyang\'s blog',
+    title: 'Huzhongyang\'s blog',
+    link: constants.blogUrl,
+    description: 'Huzhongyang\'s blog',
+    language: 'zh-CN',
+    image: `${constants.blogUrl}/images/avatar.png`,
+    copyright: 'Copyright © 2025 Huzhongyang',
+  }
   feed.addContributor({
     name: 'huzhongyang',
     email: 'hzy18023@gmail.com',
