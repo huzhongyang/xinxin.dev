@@ -1,4 +1,5 @@
 import process from 'node:process'
+import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
   modules: ['nuxt-module-feed', '@unocss/nuxt', '@nuxthub/core', '@nuxt/content', '@nuxtjs/google-fonts', '@nuxt/image'],

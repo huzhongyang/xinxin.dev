@@ -13,34 +13,34 @@
     "tz": "npx taze major -w && pnpm i"
   },
   "dependencies": {
-    "@antfu/utils": "^9.2.0",
-    "@nuxt/content": "^3.6.3",
+    "@antfu/utils": "^9.3.0",
+    "@nuxt/content": "^3.7.1",
     "@nuxt/image": "^1.11.0",
-    "@nuxthub/core": "0.9.0",
+    "@nuxthub/core": "^0.9.0",
     "@nuxtjs/google-fonts": "^3.2.0",
-    "@unocss/reset": "66.2.1",
-    "better-sqlite3": "^12.2.0",
-    "esbuild": "^0.25.8",
+    "@unocss/reset": "^66.5.2",
+    "better-sqlite3": "^12.4.1",
+    "esbuild": "^0.25.10",
     "ipad-cursor": "^0.5.2",
-    "nuxt": "^4.0.3",
+    "nuxt": "^4.1.3",
     "typed.js": "^2.1.0",
     "ufo": "^1.6.1",
-    "vue": "^3.5.18",
+    "vue": "^3.5.22",
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^5.2.0",
-    "@iconify/json": "^2.2.367",
-    "@unocss/eslint-plugin": "66.2.1",
-    "@unocss/nuxt": "66.2.1",
-    "eslint": "^9.33.0",
-    "eslint-plugin-format": "^1.0.1",
+    "@antfu/eslint-config": "^5.4.1",
+    "@iconify/json": "^2.2.392",
+    "@unocss/eslint-plugin": "^66.5.2",
+    "@unocss/nuxt": "^66.5.2",
+    "eslint": "^9.37.0",
+    "eslint-plugin-format": "^1.0.2",
     "nuxt-module-feed": "^1.1.4",
-    "sass": "^1.90.0",
-    "sharp": "^0.34.3",
-    "typescript": "^5.9.2",
-    "unocss": "66.2.1",
-    "wrangler": "^4.28.1"
+    "sass": "^1.93.2",
+    "sharp": "^0.34.4",
+    "typescript": "^5.9.3",
+    "unocss": "^66.5.2",
+    "wrangler": "^4.42.0"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
@@ -53,5 +53,5 @@
       "workerd"
     ]
   },
-  "packageManager": "pnpm@10.14.0"
+  "packageManager": "pnpm@10.18.1"
 }
